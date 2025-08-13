@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../static/css/style.css" />
+    <title>Flask</title>
+  </head>
+  <style>
+    #container {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+    }
+    .card {
+      width: 30%;
+      height: 300px;
+      margin: 10px;
+    }
+    .card {
+      background-color: powderblue;
+    }
+  </style>
+  <body>
+    <div id="container">
+      {% for x in range (0,times): %}
+      <div
+        class="card"
+        {%if
+        color
+        :%}
+        style="background-color: {{color}};"
+        {%endif%}
+      >
+        <h1>This is card Number: {{ x+1 }} {{color}}</h1>
+      </div>
+      {% endfor %}
+    </div>
+  </body>
+</html>

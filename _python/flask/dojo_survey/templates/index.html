@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../static/css/style.css" />
+    <title>Form</title>
+  </head>
+  <body>
+    <div class="container">
+      <form
+        action="/result"
+        method="post"
+        {% if show_results %}class="hidden"{% endif %}
+      >
+        <div class="item">
+          <label for="name">Your Name:</label>
+          <input required type="text" name="name" id="name" />
+        </div>
+        <div class="item">
+          <label for="gender">Gender</label>
+          <div class="radio-group">
+            <div class="radio-option">
+                <input type="radio" name="gender" id="male" value="Male" />
+                <label for="male">Male</label>
+            </div>
+            <div class="radio-option">
+                <input type="radio" name="gender" id="female" value="Female" />
+                <label for="female">Female</label>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <label for="location">Dojo Location:</label>
+          <select required name="location" id="location">
+            <option value="Gaza">Gaza</option>
+            <option value="Cairo">Cairo</option>
+            <option value="Muscat">Muscat</option>
+          </select>
+        </div>
+        <div class="item">
+          <label for="language">Favorite Language:</label>
+          <select required name="language" id="language">
+            <option value="Python">Python</option>
+            <option value="JavaScript">JavaScript</option>
+            <option value="C++">C++</option>
+          </select>
+        </div>
+        <div class="item txt-area">
+          <label for="comment">Comment(optional):</label>
+          <textarea name="comment" id="comment"></textarea>
+        </div>
+        <input id="submit" type="submit" value="Create User" />
+      </form>
+      <div class="show-container {% if not show_results %}hidden{% endif %}">
+        <h1>Submitted Info</h1>
+        <div class="item">
+          <span>Name:</span>
+          <span>{{name_from_template}}</span>
+        </div>
+        <div class="item">
+          <span>Gender:</span>
+          <span>{{gender_from_template}}</span>
+        </div>
+        <div class="item">
+          <span>Dojo Location:</span>
+          <span>{{location_from_template}}</span>
+        </div>
+        <div class="item">
+          <span>Favorite Language:</span>
+          <span>{{language_from_template}}</span>
+        </div>
+        <div class="item">
+          <span>Comment:</span>
+          <span>{{comment_from_template}}</span>
+        </div>
+        <button type="button" class="back-button">Back</button>
+      </div>
+    </div>
+    <script src="../static/js/script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,64 @@
+snippet 1 is equal to :
+5
+
+snippet 2 is equal to :
+10
+
+snippet 3 is equal to :
+5
+
+snippet 4 is equal to :
+5
+
+snippet 5 is equal to :
+5
+None
+
+snippet 6 is equal to :
+3
+5
+typeErr
+
+snippet 7 is equal to :
+25
+
+snippet 8 is equal to :
+100
+10
+
+snippet 9 is equal to :
+7
+14
+21
+
+snippet 10 is equal to :
+8
+
+snippet 11 is equal to :
+500
+500
+300
+500
+
+snippet 12 is equal to :
+500
+500
+300
+500
+
+snippet 13 is equal to :
+500
+500
+300
+None
+
+snippet 14 is equal to :
+1
+3
+2
+
+snippet 15 is equal to :
+1
+3
+5
+10
