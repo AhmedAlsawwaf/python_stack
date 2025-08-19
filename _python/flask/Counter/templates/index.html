@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/style.css">
+    <title>Counter</title>
+</head>
+<body>
+    <div class="counter">
+        <h1>Count</h1>
+        <h2><span id="num-count">{{count}}</span> times</h2>
+        <div class="btn-container">
+            <form action="/increment">
+                <button>Increment</button>
+            </form>
+            <form action="/reset">
+                <button>Reset</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
