@@ -1,0 +1,38 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Great Number Game</title>
+    <link rel="stylesheet" href="../static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Great Number Game</h1>
+        <p>I'm thinking of a number between 1 and 100...</p>
+        <p>Can you guess what it is?</p>
+        
+        <div class="attempts">
+            <span>Attempts: {{ session.get('attempts', 0) }}</span>
+        </div>
+        {% if not session.get('game_over') %}
+            <form class="guess-form" action="/guess" method="POST">
+                <input type="number" name="guess" min="1" max="100" required autofocus>
+                <button type="submit">Submit Guess</button>
+            </form>
+        {% endif %}
+        {% if result %}
+            <div class="result-box {{ result }}">
+                <p>{{ message }}</p>
+                
+                {% if result == 'correct' or result == 'lose' %}
+                    <form action="/play_again" method="POST">
+                        <button type="submit">Play Again</button>
+                    </form>
+                {% endif %}
+            </div>
+        {% endif %}
+    </div>
+</body>
+</html>
