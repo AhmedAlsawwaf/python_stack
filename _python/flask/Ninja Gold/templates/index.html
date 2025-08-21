@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ninja Gold</title>
+    <link rel="stylesheet" href="../static/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="counter">
+            <p>Your Gold : </p>
+            <span>{{gold}}</span>
+        </div>
+        <div class="cards_container">
+            <div class="card">
+                <h1>Farm</h1>
+                <h2>(earns 10-20 golds)</h2>
+                <form action="process_money" method="post"">
+                    <input type="hidden" name="building" value="farm">
+                    <button>Find Gold!</button>
+                </form>
+            </div>
+            <div class="card">
+                <h1>Cave</h1>
+                <h2>(earns 5-10 golds)</h2>
+                <form action="process_money" method="post"">
+                    <input type="hidden" name="building" value="cave">
+                    <button>Find Gold!</button>
+                </form>
+            </div>
+            <div class="card">
+                <h1>House</h1>
+                <h2>(earns 2-5 golds)</h2>
+                <form action="process_money" method="post"">
+                    <input type="hidden" name="building" value="house">
+                    <button>Find Gold!</button>
+                </form>
+            </div>
+            <div class="card">
+                <h1>Casino</h1>
+                <h2>(earns/takes 0-50 golds)</h2>
+                <form action="process_money" method="post"">
+                    <input type="hidden" name="building" value="casino">
+                    <button>Find Gold!</button>
+                </form>
+            </div>
+        </div>
+        <div class="activities">
+            <h2>Activities:</h2>
+            <div class="activities_container">
+                {% for activity in activities %}
+                <p class="{% if activity.profit %}positive_profit{% else %}negative_profit{% endif %}">{{ activity.message }}</p>
+                {% endfor %}    
+            </div>
+        </div>
+        <form action="clear" method="post">
+            <button>Clear</button>
+        </form>
+    </div>
+</body>
+</html>

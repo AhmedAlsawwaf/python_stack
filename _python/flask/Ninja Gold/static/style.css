@@ -1,0 +1,59 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.container{
+    width: 80%;
+    margin: 50px auto;
+}
+.counter{
+    font-size: 18px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    span{
+        border: 2px solid black;
+        padding: 3px 20px;
+        margin: 0px 10px;
+    }
+}
+.cards_container{
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    margin: 20px 0;
+    
+}
+.card{
+    width: 20%;
+    border: 2px solid black;
+    padding: 30px 10px;
+    h2{
+        font-size: 18px;
+        margin: 15px 0;
+    }
+}
+button{
+    min-width: max-content;
+    height: 30px;
+    background-color: lightblue;
+    font-size: 14px;
+    font-weight: 700;
+    border: none;
+    padding: 0 10px;
+    box-shadow: 2px 4px 8px black;
+}
+.activities_container{
+    border: 2px solid black;
+    min-height: 80px;
+    margin: 10px 0;
+    padding: 10px;
+    font-weight: 700;
+    font-size: 18px;
+}
+.positive_profit{
+    color: green;
+}
+.negative_profit{
+    color: rgb(191, 0, 0);
+}
